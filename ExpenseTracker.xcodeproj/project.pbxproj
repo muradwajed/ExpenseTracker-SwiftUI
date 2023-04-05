@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		099E927A35C6314472C8DB80 /* Pods_ExpenseTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5E4591AF62533462F7272 /* Pods_ExpenseTracker.framework */; };
 		3849487129C08AA7004D413C /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849487029C08AA7004D413C /* TransactionList.swift */; };
+		385F0C5E29DD758B001D43AE /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 385F0C5D29DD758B001D43AE /* Collections */; };
+		385F0C6029DD758B001D43AE /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 385F0C5F29DD758B001D43AE /* DequeModule */; };
+		385F0C6229DD758B001D43AE /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 385F0C6129DD758B001D43AE /* OrderedCollections */; };
+		385F0C6529DD7737001D43AE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 385F0C6429DD7737001D43AE /* SwiftUICharts */; };
 		3887BD1F29BD3A5800EAE828 /* RecentTransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887BD1E29BD3A5800EAE828 /* RecentTransactionList.swift */; };
 		38D6B59229BBFDD1005CDE31 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6B59129BBFDD1005CDE31 /* ExpenseTrackerApp.swift */; };
 		38D6B59429BBFDD1005CDE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6B59329BBFDD1005CDE31 /* ContentView.swift */; };
@@ -45,7 +49,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385F0C5E29DD758B001D43AE /* Collections in Frameworks */,
 				099E927A35C6314472C8DB80 /* Pods_ExpenseTracker.framework in Frameworks */,
+				385F0C6229DD758B001D43AE /* OrderedCollections in Frameworks */,
+				385F0C6029DD758B001D43AE /* DequeModule in Frameworks */,
+				385F0C6529DD7737001D43AE /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +164,12 @@
 			dependencies = (
 			);
 			name = ExpenseTracker;
+			packageProductDependencies = (
+				385F0C5D29DD758B001D43AE /* Collections */,
+				385F0C5F29DD758B001D43AE /* DequeModule */,
+				385F0C6129DD758B001D43AE /* OrderedCollections */,
+				385F0C6429DD7737001D43AE /* SwiftUICharts */,
+			);
 			productName = ExpenseTracker;
 			productReference = 38D6B58E29BBFDD1005CDE31 /* ExpenseTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +198,10 @@
 				Base,
 			);
 			mainGroup = 38D6B58529BBFDD1005CDE31;
+			packageReferences = (
+				385F0C5C29DD758B001D43AE /* XCRemoteSwiftPackageReference "swift-collections" */,
+				385F0C6329DD7737001D43AE /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 38D6B58F29BBFDD1005CDE31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -476,6 +494,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		385F0C5C29DD758B001D43AE /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		385F0C6329DD7737001D43AE /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		385F0C5D29DD758B001D43AE /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 385F0C5C29DD758B001D43AE /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		385F0C5F29DD758B001D43AE /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 385F0C5C29DD758B001D43AE /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		385F0C6129DD758B001D43AE /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 385F0C5C29DD758B001D43AE /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		385F0C6429DD7737001D43AE /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 385F0C6329DD7737001D43AE /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38D6B58629BBFDD1005CDE31 /* Project object */;
 }
